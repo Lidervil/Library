@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,900;1,300&display=swap');
+
+body {
+    background-image: url(/bgimg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.content-top {
+    background-color: rgba(255, 255, 255, 0.95);
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.content-top p, .content-top svg {
+    padding: 3rem;
+}
+
+.content-mid {
+    background-color: rgb(234, 234, 234);
+    height: 80vh;
+    box-shadow: inset 0px 1px 6px 0px #000;
+    overflow: overlay;
+}
+
+.content-mid::-webkit-scrollbar {
+    position: absolute;
+}
+
+.content-bot {
+    background-color: rgba(255, 255, 255, 0.95);
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 0;
+    font-weight: 900;
+    font-size: 1rem;
+    box-shadow: 0px -2px 5px 0px #000;
+}
+
+.grid {
+    display: flex;
+    gap: 0.2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.book {
+    border-radius: 5px;
+    writing-mode: vertical-rl;
+    height: 10rem;
+    width: 1.5rem;
+    color: black;
+    font-weight: 900;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset -0.15rem 0 0.5rem rgba(0, 0, 0, 0.25),
+    inset 0.15rem 0 0.5rem rgba(0, 0, 0, 0.25);
+    overflow: visible;
+    white-space: nowrap;
+    user-select: none;
+    transition: all 500ms;
+}
+
+.book:hover {
+    background-color: rgba(183, 183, 183, 0.8);
+    transform: translateY(-2.4rem);
+}
+
+.book .p-max {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: .5rem;
+}
+
+.book .p-min {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.left-bot, .mid-bot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    gap: .5rem;
+}
+
+.form-box {
+    display: flex;
+    align-items: center;
+}
+
+.mid-bot  input {
+    color: black;
+    background-color: white;
+}
+
+input[type=checkbox] {
+    pointer-events: none;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.right-bot {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form-box input, .form-box label {
+    height: 1.2rem;
+    border-radius: 10px;
+    padding: 0 8px;
+    font-weight: 500;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#title {
+    width: 10rem;
+}
+
+.form-box label {
+    text-align: center;
+}
+
+button {
+    font-weight: 500;
+    border: none;
+    background-color: rgb(232, 232, 232);
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+button:hover, svg:hover {
+    background-color: rgb(117, 117, 117);
+}
+
+.book p {
+    overflow: hidden;
+    padding: 3rem 0;
+}
+
+.book svg, .book .delete{
+    position: absolute;
+    display: none;
+    width: 23px;
+    height: 23px;
+    margin: 0;
+    box-shadow: inset -0.15rem 0 0.5rem rgba(0, 0, 0, 0.25),
+    inset 0.15rem 0 0.5rem rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: all 500ms;
+}
+
+.book svg {
+    background-color: greenyellow;
+    bottom: -1.4rem;
+    font-size: 1px;
+    border-radius: 5px;
+}
+
+.book svg:hover {
+    color: white;
+    background-color: green;
+}
+
+.book .delete {
+    padding: 0;
+    text-align: center;
+    font-size: 1rem;
+    bottom: -2.7rem;
+    background-color: orangered;
+}
+
+.book .delete:hover {
+    color: white;
+    background-color: rgb(111, 0, 22);
+}
+
+.book:hover svg,.book:hover .delete {
+    display: block;
+    opacity: 1;
+}
+
+
+.add-box {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset -0.15rem 0 0.5rem rgba(0, 0, 0, 0.25),
+    inset 0.15rem 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.add-box:hover {
+    background-color: rgba(67, 67, 67, 0.8);
+}
+
+.box-texto {
+    width: 4.2rem;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    margin: auto;
+}
+
+.add-box .box-texto::after {
+    font-size: 5rem;
+    content: '+';
+}
+
+.add-box:hover .box-texto::after {
+    font-size: 1rem;
+    padding: .2rem;
+    margin: .2rem;
+    font-family: 900;
+    color: white;
+    content: 'To add a book use the footer';
+}
+
+
+@media (min-width: 1000px) {
+    .container {
+        width: 80vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 60vw;
+    }
+}
