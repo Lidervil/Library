@@ -248,6 +248,8 @@ button:hover, svg:hover {
 
 .add-box:hover {
     background-color: rgba(67, 67, 67, 0.8);
+    box-shadow: inset -0.15rem 0 0.5rem rgb(0, 0, 0),
+    inset 0.15rem 0 0.5rem rgb(0, 0, 0);
 }
 
 .box-texto {
